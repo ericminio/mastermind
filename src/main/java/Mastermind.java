@@ -1,4 +1,5 @@
 
+
 public class Mastermind {
 
 	public String givenTheSecret;

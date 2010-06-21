@@ -1,15 +1,14 @@
 
 public class Mastermind {
 
-	public String secret;
-	
-	public void enterRow() {
-		
+	public String givenTheSecret;
+	public String whenPlayerPlays;
+
+	public boolean doesHeWin() {
+		if (whenPlayerPlays.equalsIgnoreCase(givenTheSecret)) {
+			return true;
+		}
+		return false;
 	}
 	
-	public String proposition;
-	
-	public int nombreDeCouleursBienPlacees() {
-		return 0;
-	}
 }

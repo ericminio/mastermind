@@ -12,4 +12,12 @@ public class Mastermind {
 		return false;
 	}
 	
+	public int black() {
+		return 0;
+	}
+	
+	public int white() {
+		return 0;
+	}
+	
 }

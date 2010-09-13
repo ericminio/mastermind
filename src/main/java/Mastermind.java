@@ -13,7 +13,8 @@ public class Mastermind {
 	}
 	
 	public int black() {
-		return 0;
+		String[] items = givenTheSecret.split( " " );
+		return items.length;
 	}
 	
 	public int white() {

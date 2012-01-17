@@ -17,7 +17,7 @@ public class MastermindFixture {
 	}
 	
 	public boolean doesHeWin() {
-		return bilou.blackCount() == 4;
+		return bilou.blackCount() == bilou.secret.size();
 	}
 	
 	public int black() {

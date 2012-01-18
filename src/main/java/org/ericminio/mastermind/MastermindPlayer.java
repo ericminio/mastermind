@@ -1,15 +1,12 @@
 package org.ericminio.mastermind;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public class MastermindPlayer {
 
 	public Combinaison secret;
 	public Combinaison propositionToAssess;
 	public MastermindPlayer secretHolder;
 	
-	public void acceptToPlayWith(MastermindPlayer player) {
+	public void acceptsTheChallengeOf(MastermindPlayer player) {
 		this.secretHolder = player;
 	}
 
@@ -24,8 +21,7 @@ public class MastermindPlayer {
 	public int blackCount() {
 		int count = 0;
 		for(int i=0; i<propositionToAssess.size(); i++) {
-			if (propositionToAssess.get( i )
-					.equalsIgnoreCase( secret.get( i ) ) ) {
+			if (propositionToAssess.get( i ).equals( secret.get( i ) ) ) {
 				count ++;
 			}
 		}
@@ -33,13 +29,7 @@ public class MastermindPlayer {
 	}
 
 	public int whiteCount() {
-		return intersection().size() - blackCount();
-	}
-
-	protected Set<String> intersection() {
-		Set<String> tmp = new HashSet<String>( secret );
-		tmp.retainAll( propositionToAssess );
-		return tmp;
+		return secret.intersect( propositionToAssess ).size() - blackCount();
 	}
 
 }

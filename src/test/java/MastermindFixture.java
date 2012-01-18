@@ -5,7 +5,7 @@ import static org.ericminio.mastermind.Players.claire;
 public class MastermindFixture {
 
 	public MastermindFixture() {
-		claire.acceptToPlayWith( bilou );
+		claire.acceptsTheChallengeOf( bilou );
 	}
 	
 	public void setGivenTheSecret(String secret) {
